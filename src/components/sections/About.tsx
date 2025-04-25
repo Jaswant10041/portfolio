@@ -47,7 +47,7 @@ const About: React.FC = () => {
               <div className="relative">
                 <div className="aspect-square bg-gradient-to-br rounded-2xl overflow-hidden">
                   <img
-                    src="./dp4.jpg"
+                    src="https://cdn.corenexis.com/view/?img=d/ap25/eTJln6.jpg"
                     alt="Profile"
                     className="w-full h-full object-cover mix-blend-overlay opacity-75"
                   />
