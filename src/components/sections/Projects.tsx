@@ -17,7 +17,7 @@ const projects: Project[] = [
     description: 'A full-stack blogging platform where users can create, read, and comment on blogs. Implemented JWT-based authentication for secure login and access control. Utilized TanStack Query for efficient API data caching and handling stale data.',
     image: 'https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
     tags: ['MERN Stack', 'JWT', 'TanStack Query', 'Tailwind CSS'],
-    github: 'https://github.com/Jaswant10041',
+    github: 'https://github.com/Jaswant10041/Blogging-Website',
     featured: true,
   },
   {
