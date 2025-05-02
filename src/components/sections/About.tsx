@@ -42,67 +42,71 @@ const About: React.FC = () => {
       </p>
     </div>
 
-    <div className="flex flex-col justify-center items-center">
-      <div className="md:col-span-3 animate-on-scroll opacity-0 transition-all duration-700 delay-300 text-center">
-        <h3 className="text-2xl font-bold mb-4 text-slate-900 dark:text-white">
-          Software Developer & AWS Enthusiast
-        </h3>
-        <p className="text-slate-700 dark:text-slate-300 mb-6 leading-relaxed">
-          I'm a passionate developer specializing in full-stack web development 
-          with expertise in React, Node.js, and AWS cloud services. I'm currently 
-          pursuing my Bachelor's in Computer Science Engineering at Lovely 
-          Professional University with a strong focus on problem-solving and 
-          data structures.
-        </p>
-        <p className="text-slate-700 dark:text-slate-300 mb-6 leading-relaxed">
-          With experience in both front-end and back-end technologies, I enjoy 
-          building scalable applications and continuously exploring new technologies 
-          to enhance my skills. I'm particularly interested in cloud computing 
-          and have hands-on experience with AWS services.
-        </p>
+    {/* Center-aligned content starts here */}
+    <div className="flex flex-col items-center text-center animate-on-scroll opacity-0 transition-all duration-700 delay-300">
+      <h3 className="text-2xl font-bold mb-4 text-slate-900 dark:text-white">
+        Software Developer & AWS Enthusiast
+      </h3>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-8">
-          <div className="flex flex-col items-center text-center space-y-2">
-            <Code className="text-blue-600 dark:text-blue-400" size={20} />
-            <div>
-              <h4 className="font-medium text-slate-900 dark:text-white">Front-end</h4>
-              <p className="text-sm text-slate-600 dark:text-slate-400">
-                React, HTML, CSS, Tailwind
-              </p>
-            </div>
+      <p className="text-slate-700 dark:text-slate-300 mb-6 leading-relaxed max-w-2xl">
+        I'm a passionate developer specializing in full-stack web development 
+        with expertise in React, Node.js, and AWS cloud services. I'm currently 
+        pursuing my Bachelor's in Computer Science Engineering at Lovely 
+        Professional University with a strong focus on problem-solving and 
+        data structures.
+      </p>
+      <p className="text-slate-700 dark:text-slate-300 mb-6 leading-relaxed max-w-2xl">
+        With experience in both front-end and back-end technologies, I enjoy 
+        building scalable applications and continuously exploring new technologies 
+        to enhance my skills. I'm particularly interested in cloud computing 
+        and have hands-on experience with AWS services.
+      </p>
+
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-8 max-w-xl w-full">
+        <div className="flex items-center space-x-3">
+          <Code className="text-blue-600 dark:text-blue-400" size={20} />
+          <div className="text-left">
+            <h4 className="font-medium text-slate-900 dark:text-white">Front-end</h4>
+            <p className="text-sm text-slate-600 dark:text-slate-400">
+              React, HTML, CSS, Tailwind
+            </p>
           </div>
-          <div className="flex flex-col items-center text-center space-y-2">
-            <Database className="text-teal-600 dark:text-teal-400" size={20} />
-            <div>
-              <h4 className="font-medium text-slate-900 dark:text-white">Back-end</h4>
-              <p className="text-sm text-slate-600 dark:text-slate-400">
-                Node.js, Express, MongoDB
-              </p>
-            </div>
+        </div>
+
+        <div className="flex items-center space-x-3">
+          <Database className="text-teal-600 dark:text-teal-400" size={20} />
+          <div className="text-left">
+            <h4 className="font-medium text-slate-900 dark:text-white">Back-end</h4>
+            <p className="text-sm text-slate-600 dark:text-slate-400">
+              Node.js, Express, MongoDB
+            </p>
           </div>
-          <div className="flex flex-col items-center text-center space-y-2">
-            <Cloud className="text-indigo-600 dark:text-indigo-400" size={20} />
-            <div>
-              <h4 className="font-medium text-slate-900 dark:text-white">Cloud</h4>
-              <p className="text-sm text-slate-600 dark:text-slate-400">
-                AWS, S3, Lambda, CloudWatch
-              </p>
-            </div>
+        </div>
+
+        <div className="flex items-center space-x-3">
+          <Cloud className="text-indigo-600 dark:text-indigo-400" size={20} />
+          <div className="text-left">
+            <h4 className="font-medium text-slate-900 dark:text-white">Cloud</h4>
+            <p className="text-sm text-slate-600 dark:text-slate-400">
+              AWS, S3, Lambda, CloudWatch
+            </p>
           </div>
-          <div className="flex flex-col items-center text-center space-y-2">
-            <Award className="text-orange-600 dark:text-orange-400" size={20} />
-            <div>
-              <h4 className="font-medium text-slate-900 dark:text-white">Problem Solving</h4>
-              <p className="text-sm text-slate-600 dark:text-slate-400">
-                DSA, LeetCode, GeeksforGeeks
-              </p>
-            </div>
+        </div>
+
+        <div className="flex items-center space-x-3">
+          <Award className="text-orange-600 dark:text-orange-400" size={20} />
+          <div className="text-left">
+            <h4 className="font-medium text-slate-900 dark:text-white">Problem Solving</h4>
+            <p className="text-sm text-slate-600 dark:text-slate-400">
+              DSA, LeetCode, GeeksforGeeks
+            </p>
           </div>
         </div>
       </div>
     </div>
   </div>
 </div>
+
 
     </section>
   );
