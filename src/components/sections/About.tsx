@@ -42,30 +42,32 @@ const About: React.FC = () => {
       </p>
     </div>
 
-    {/* Center-aligned content starts here */}
+    {/* Centered Content Start */}
     <div className="flex flex-col items-center text-center animate-on-scroll opacity-0 transition-all duration-700 delay-300">
       <h3 className="text-2xl font-bold mb-4 text-slate-900 dark:text-white">
         Software Developer & AWS Enthusiast
       </h3>
 
-      <p className="text-slate-700 dark:text-slate-300 mb-6 leading-relaxed max-w-2xl">
-        I'm a passionate developer specializing in full-stack web development 
-        with expertise in React, Node.js, and AWS cloud services. I'm currently 
-        pursuing my Bachelor's in Computer Science Engineering at Lovely 
-        Professional University with a strong focus on problem-solving and 
-        data structures.
-      </p>
-      <p className="text-slate-700 dark:text-slate-300 mb-6 leading-relaxed max-w-2xl">
-        With experience in both front-end and back-end technologies, I enjoy 
-        building scalable applications and continuously exploring new technologies 
-        to enhance my skills. I'm particularly interested in cloud computing 
-        and have hands-on experience with AWS services.
-      </p>
+      <div className="max-w-2xl w-full px-4">
+        <p className="text-slate-700 dark:text-slate-300 mb-6 leading-relaxed">
+          I'm a passionate developer specializing in full-stack web development 
+          with expertise in React, Node.js, and AWS cloud services. I'm currently 
+          pursuing my Bachelor's in Computer Science Engineering at Lovely 
+          Professional University with a strong focus on problem-solving and 
+          data structures.
+        </p>
+        <p className="text-slate-700 dark:text-slate-300 mb-6 leading-relaxed">
+          With experience in both front-end and back-end technologies, I enjoy 
+          building scalable applications and continuously exploring new technologies 
+          to enhance my skills. I'm particularly interested in cloud computing 
+          and have hands-on experience with AWS services.
+        </p>
+      </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-8 max-w-xl w-full">
-        <div className="flex items-center space-x-3">
-          <Code className="text-blue-600 dark:text-blue-400" size={20} />
-          <div className="text-left">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-8 w-full max-w-2xl px-4">
+        <div className="flex items-start space-x-3 text-left">
+          <Code className="text-blue-600 dark:text-blue-400 mt-1" size={20} />
+          <div>
             <h4 className="font-medium text-slate-900 dark:text-white">Front-end</h4>
             <p className="text-sm text-slate-600 dark:text-slate-400">
               React, HTML, CSS, Tailwind
@@ -73,9 +75,9 @@ const About: React.FC = () => {
           </div>
         </div>
 
-        <div className="flex items-center space-x-3">
-          <Database className="text-teal-600 dark:text-teal-400" size={20} />
-          <div className="text-left">
+        <div className="flex items-start space-x-3 text-left">
+          <Database className="text-teal-600 dark:text-teal-400 mt-1" size={20} />
+          <div>
             <h4 className="font-medium text-slate-900 dark:text-white">Back-end</h4>
             <p className="text-sm text-slate-600 dark:text-slate-400">
               Node.js, Express, MongoDB
@@ -83,9 +85,9 @@ const About: React.FC = () => {
           </div>
         </div>
 
-        <div className="flex items-center space-x-3">
-          <Cloud className="text-indigo-600 dark:text-indigo-400" size={20} />
-          <div className="text-left">
+        <div className="flex items-start space-x-3 text-left">
+          <Cloud className="text-indigo-600 dark:text-indigo-400 mt-1" size={20} />
+          <div>
             <h4 className="font-medium text-slate-900 dark:text-white">Cloud</h4>
             <p className="text-sm text-slate-600 dark:text-slate-400">
               AWS, S3, Lambda, CloudWatch
@@ -93,9 +95,9 @@ const About: React.FC = () => {
           </div>
         </div>
 
-        <div className="flex items-center space-x-3">
-          <Award className="text-orange-600 dark:text-orange-400" size={20} />
-          <div className="text-left">
+        <div className="flex items-start space-x-3 text-left">
+          <Award className="text-orange-600 dark:text-orange-400 mt-1" size={20} />
+          <div>
             <h4 className="font-medium text-slate-900 dark:text-white">Problem Solving</h4>
             <p className="text-sm text-slate-600 dark:text-slate-400">
               DSA, LeetCode, GeeksforGeeks
@@ -104,8 +106,10 @@ const About: React.FC = () => {
         </div>
       </div>
     </div>
+    {/* Centered Content End */}
   </div>
 </div>
+
 
 
     </section>
