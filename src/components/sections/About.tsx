@@ -44,12 +44,7 @@ import React, { useEffect, useRef } from 'react';
  
            <div className="grid md:grid-cols-5 gap-8 items-center">
              <div className="md:col-span-2 animate-on-scroll opacity-0 transition-all duration-700 delay-200">
-               <div className="relative">
-                 
-                 <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-white dark:bg-slate-800 rounded-xl shadow-lg flex items-center justify-center p-4">
-                   <Code size={36} className="text-blue-600 dark:text-blue-400" />
-                 </div>
-               </div>
+               
              </div>
  
              <div className="md:col-span-3 animate-on-scroll opacity-0 transition-all duration-700 delay-300">
