@@ -42,7 +42,7 @@ const About: React.FC = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-5 gap-8 items-center">
+          <div className="grid md:grid-cols-5 gap-8 flex justify-center items-center">
             <div className="md:col-span-3 animate-on-scroll opacity-0 transition-all duration-700 delay-300">
               <h3 className="text-2xl font-bold mb-4 text-slate-900 dark:text-white">
                 Software Developer & AWS Enthusiast
