@@ -43,7 +43,7 @@ import React, { useEffect, useRef } from 'react';
            </div>
  
            <div className="grid md:grid-cols-5 gap-8 items-center">
-             <div className="md:col-span-2 animate-on-scroll opacity-0 transition-all duration-700 delay-200">
+             <div className="md:col-span-1 animate-on-scroll opacity-0 transition-all duration-700 delay-200">
                
              </div>
  
