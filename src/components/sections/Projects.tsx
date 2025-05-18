@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useMemo } from 'react';
 import { ExternalLink, Github } from 'lucide-react';
 
 type Project = {
@@ -25,7 +25,7 @@ const projects: Project[] = [
     description: 'Built an e-commerce application with user and admin roles. Implemented JWT-based authentication for secure login and access control. Admins can manage products with CRUD operations. Users can view products and add them to their cart.',
     image: 'https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
     tags: ['MERN Stack', 'JWT', 'Tailwind CSS'],
-    github: 'https://github.com/Jaswant10041',
+    github: 'https://github.com/Jaswant10041/e-commerce',
     featured: true,
   },
   {
@@ -33,7 +33,7 @@ const projects: Project[] = [
     description: 'Developed a comprehensive Library Management System using C++. User can add, search, issue, return, list, and delete books. Implemented a robust data structure using structs and classes for efficient book management.',
     image: 'https://images.pexels.com/photos/1290141/pexels-photo-1290141.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
     tags: ['C++', 'STL', 'Data Structures'],
-    github: 'https://github.com/Jaswant10041',
+    github: 'https://github.com/Jaswant10041/LibraryManagement',
     featured: false,
   },
 ];
@@ -42,13 +42,16 @@ const Projects: React.FC = () => {
   const [filter, setFilter] = useState<'all' | 'featured'>('all');
   const projectsRef = useRef<HTMLDivElement>(null);
 
-  const filteredProjects = filter === 'all' 
-    ? projects 
-    : projects.filter(project => project.featured);
+  // Use useMemo to optimize filtered projects
+  const filteredProjects = useMemo(() => {
+    return filter === 'all'
+      ? projects
+      : projects.filter((project) => project.featured);
+  }, [filter]);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
-      (entries) => {
+      (entries: IntersectionObserverEntry[]) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             entry.target.classList.add('animate-fade-in');
@@ -63,6 +66,7 @@ const Projects: React.FC = () => {
 
     return () => {
       elements?.forEach((el) => observer.unobserve(el));
+      observer.disconnect(); // Properly disconnect the observer
     };
   }, []);
 
@@ -112,7 +116,7 @@ const Projects: React.FC = () => {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredProjects.map((project, index) => (
               <div
-                key={index}
+                key={`${project.title}-${index}`} // Ensure unique keys
                 className="animate-on-scroll opacity-0 transition-all duration-700"
                 style={{ transitionDelay: `${200 + index * 100}ms` }}
               >
@@ -120,7 +124,7 @@ const Projects: React.FC = () => {
                   <div className="h-48 overflow-hidden">
                     <img
                       src={project.image}
-                      alt={project.title}
+                      alt={`Screenshot of ${project.title}`} // Improved alt text
                       className="w-full h-full object-cover transition-transform duration-700 hover:scale-110"
                     />
                   </div>
@@ -134,7 +138,7 @@ const Projects: React.FC = () => {
                     <div className="flex flex-wrap gap-2 mb-4">
                       {project.tags.map((tag, tagIndex) => (
                         <span
-                          key={tagIndex}
+                          key={`${tag}-${tagIndex}`} // Ensure unique keys
                           className="inline-block px-2 py-1 text-xs font-medium rounded-md bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300"
                         >
                           {tag}
